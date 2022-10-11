@@ -35,7 +35,7 @@ const Users = () => {
 
   useEffect(() => {
     console.log(users)
-    const sse = new EventSource('http://chuomall.xyz/users/', {
+    const sse = new EventSource('https://chuomall.xyz/users/', {
       method: 'POST',
     });
 
