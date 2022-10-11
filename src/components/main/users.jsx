@@ -20,18 +20,6 @@ import AvatarDropDown from './avatardropdown'
 const Users = () => {
   const [users, setUsers] = useState([]);
 
-  const orderData = () => {
-    axios
-      .get('https://chuomall.xyz/users/')
-      .then((res) => {
-        let users = res.data;
-        setUsers(users.users);
-        console.log(users);
-      })
-      .catch((e) => {
-        console.log(e);
-      });
-  };
 
   useEffect(() => {
     console.log(users)
