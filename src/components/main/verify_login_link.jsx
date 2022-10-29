@@ -5,7 +5,7 @@ import { io } from 'socket.io-client';
 
 const VerifyLoginLink = () => {
 
-    const socket = io('http://192.168.125.187:5002/verify-login-email');
+    const socket = io('https://decisionrollbackend.herokuapp.com/verify-login-email');
     const [verifyParms] = useSearchParams();
 
   const email = verifyParms.get("email");
