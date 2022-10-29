@@ -67,7 +67,7 @@ const Users = () => {
       </Tr>
     </Thead>
     <Tbody>
-      {users ? users.map((row, i)=>( <Tr>
+      {users ? users.map((row, i)=>( <Tr  key={i}>
         <Td>{row.username}</Td>
         <Td>{row.email}</Td>
         <Td>{row.createdAt}</Td>

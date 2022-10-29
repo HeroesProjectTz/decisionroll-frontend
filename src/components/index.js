@@ -4,3 +4,4 @@ export {default as Users} from './main/users';
 export {default as Vote} from './main/vote';
 export {default as Home} from './main/home';
 export {default as LoginPage} from './authentication/loginpage';
+export {default as VerifyLoginLInk} from './main/verify_login_link';
