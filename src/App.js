@@ -5,7 +5,7 @@ import {
 } from "react-router-dom";
 import { Box, ChakraProvider } from '@chakra-ui/react'
 import SideBar from './components/sidebar/sidebar'
-import {Decision,Decisions,Vote,Users,Home,LoginPage} from './components/index'
+import {Decision,Decisions,Vote,Users,Home,LoginPage,VerifyLoginLInk} from './components/index'
 import { AuthProvider } from './contexts/JWTContext';
 import { CookiesProvider } from "react-cookie";
 import AuthGuard from './guards/authguard';
@@ -14,6 +14,7 @@ import AuthGuard from './guards/authguard';
 const AppWrapper = () => {
   let routes = useRoutes([
     { path: "/login", element: <LoginPage /> },
+    { path: "/verify-login-email", element: <VerifyLoginLInk /> },
     {
       path: "",
       element:

@@ -60,6 +60,9 @@ const Decisions = () => {
   }, 6500);
 
   const newDecision = () => {
+
+    console.log(decisionTitle)
+    console.log( user.user_id.toString(),)
     if(decisionTitle !== ''){
       axios
       .post('https://chuomall.xyz/create-pull/', {
@@ -68,6 +71,7 @@ const Decisions = () => {
       })
       .then((res) => {
         const message = res.data;
+        console.log(message)
         setdecisionTitle('')
         setOpenOne(true);
         // orderData();
@@ -119,7 +123,7 @@ const Decisions = () => {
     <Input placeholder='Decision' value={decisionTitle}  onChange={handleOnChange}   size='lg'  backgroundColor='white' variant='filled' pt={8} pb={8} />
     <Stack direction='row' align='right' justify='flex-end' mt={6}>
      <Button colorScheme='teal'  onClick={newDecision}  variant='solid'>
-       Button
+       Add Decision
      </Button>
      </Stack>
     </Box>
